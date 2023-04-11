@@ -9,7 +9,8 @@ import { getCurrentMonth } from './helpers/dateFilter';
 const App = () => {
 
   const [list, setList] = useState(items);
-  const [currentMonth, setCurrentMonth] = useState();
+  const [filteredList, setFilteredList] = useState<Item[]>([]);
+  const [currentMonth, setCurrentMonth] = useState(getCurrentMonth());
 
   return (
     <C.Container>
